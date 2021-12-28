@@ -625,24 +625,24 @@ section {
 .portfolio .portfolio-wrap .portfolio-links a:hover {
   color: #148af9;
 }
-.portfolio .portfolio-wrap:hover::before {
+/* .portfolio .portfolio-wrap:hover::before {
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   opacity: 1;
-}
-.portfolio .portfolio-wrap:hover .portfolio-info {
+} */
+/* .portfolio .portfolio-wrap:hover .portfolio-info {
   opacity: 1;
-}
-.portfolio .portfolio-wrap:hover .portfolio-info::before {
+} */
+/* .portfolio .portfolio-wrap:hover .portfolio-info::before {
   top: 15px;
   left: 15px;
-}
-.portfolio .portfolio-wrap:hover .portfolio-info::after {
+} */
+/* .portfolio .portfolio-wrap:hover .portfolio-info::after {
   bottom: 15px;
   right: 15px;
-}
+} */
 
 /*--------------------------------------------------------------
 # Portfolio Details
