@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $("#gform").validate({
+    $("#submit-form").validate({
         rules:{
             subject:{
                 minlength:4
