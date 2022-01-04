@@ -2,11 +2,22 @@ $(document).ready(function(){
     $("#submit-form").validate({
         rules:{
             subject:{
+                required:true,
                 minlength:4
             }
             ,name:{
                 minlength:8,
-                maxlength:10
+                maxlength:10,
+                required:true
+            }
+            ,email:{
+                required:true
+            }
+            ,contact:{
+                required:true
+            }
+            ,message:{
+                required:true
             }
         },
         messages:{
@@ -35,6 +46,9 @@ function validation(){
     if(email == ''){
         document.getElementById('email').style.borderColor='red';
     }
+    
+
+
     if(subject == ''){
         document.getElementById('subject').style.borderColor='red';
     }
@@ -79,6 +93,7 @@ function checkalph(event){
         document.getElementById('alpherror').innerHTML = 'Alphabets only';
     }else{
         document.getElementById('alpherror').style.display = 'none';
+        document.getElementById('name').style.borderColor = 'lightgray';
     }
 }
 

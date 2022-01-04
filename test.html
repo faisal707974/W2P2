@@ -7,15 +7,71 @@
     <title>Document</title>
 </head>
 <body>
+<div class="row">
+    <form action="#" class="col-md-6 p-5 border border-primary" id="form">
+        <div class="row">
+            <div class="col">
+                <label for="fname">First Name</label>
+                <input class="form-control" type="text" id="fname" name="fname" onkeypress="checkfname()">
+            </div>
+            <div class="col">
+                <label for="lname">Last name</label>
+                <input class="form-control" type="text" id="lname" name="lname">
+            </div>
+        </div>
+        <div class="row my-3">
+            <div class="col">
+                <label for="subject">Subject</label>
+                <input class="form-control" type="text" id="subject" name="subject">
+            </div>
+            <div class="col">
+                <label for="contact">Contact</label>
+                <input class="form-control" type="text" id="contact" name="contact">
+            </div>
+        </div>
+        <input type="submit">
+    
+    </form>
+    <div class="border border-primary col-md-6">
+    
+    </div>
+</div>
+<h1 id="test"></h1>
 
-   <form action="">
-       <div class="row">
-           <label for="">name</label>
-           <input type="text">
-           <label for="">Mobile</label>
-           <input type="number">
-       </div>
-   </form>
+
+<script>
+const fname = document.getElementById('fname')
+const form = document.getElementById('form')
+const error = document.getElementById('test')
+
+ 
+
+form.addEventListener('submit', (e) => {
+    let messages = []
+
+
+    if(fname.value === '' || fname.value === null){
+        messages.push('Field is required')
+    }
+
+    if(! isNaN(fname.value) ){
+        messages.push("Name can't be a number")
+    }
+    console.log(messages.length)
+
+    if(messages.length > 0){
+        error.innerHTML= messages.join('<br>')
+        e.preventDefault
+    }
+})
+
+function checkfname(value){
+    if(! isNaN(value)){
+        fname.style.borderColor = 'red'
+    }
+}
+
+</script>
 
 
 
